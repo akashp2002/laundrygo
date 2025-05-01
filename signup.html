@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up - LaundryGo</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f3f3f3; }
+        .container { width: 400px; margin: 60px auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px #ccc; }
+        h2 { text-align: center; }
+        input, button { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+        button { background-color: #28a745; color: white; border: none; }
+        a { display: block; text-align: center; margin-top: 10px; color: #007bff; }
+        .error { color: red; font-size: 14px; display: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form id="signupForm" action="signup.php" method="POST" onsubmit="return validatePassword()">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" id="password" placeholder="Password" required>
+            <div id="passwordError" class="error">Password must be at least 6 characters long and include uppercase, lowercase, digit, and special character.</div>
+            <button type="submit">Register</button>
+            <a href="login.html">Already have an account? Login</a>
+        </form>
+    </div>
+
+    <script>
+        function validatePassword() {
+            const password = document.getElementById("password").value;
+            const errorDiv = document.getElementById("passwordError");
+
+            const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{6,}$/;
+
+            if (!regex.test(password)) {
+                errorDiv.style.display = "block";
+                return false;
+            }
+
+            errorDiv.style.display = "none";
+            return true;
+        }
+    </script>
+</body>
+</html>
