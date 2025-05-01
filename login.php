@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($role === 'admin') {
                 header("Location: admin/dashboard.php");
             } else {
-                header("Location: inance-html/index.html");
+                header("Location: home-html/index.html");
             }
             exit();
         } else {

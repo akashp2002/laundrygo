@@ -278,12 +278,15 @@ a:focus {
           align-items: center;
   background-size: cover;
   background-position: bottom;
+  min-height: 100vh;
+  padding: 0; /* Optional: remove extra spacing */
 }
 
 .slider_section .row {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100%;
 }
 
 .slider_section #customCarousel1 {
@@ -293,6 +296,8 @@ a:focus {
 
 .slider_section .detail-box {
   padding-bottom: 90px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .slider_section .detail-box h1 {
@@ -325,11 +330,15 @@ a:focus {
 
 .slider_section .img-box img {
   width: 100%;
+  height: auto;
+  object-fit: cover;
 }
+
 
 .feature_section {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+          margin-top: 50px;
 }
 
 .feature_section .feature_container {
@@ -503,8 +512,8 @@ a:focus {
 }
 
 .service_section .box .img-box {
-  width: 65px;
-  height: 65px;
+  width: 150px;
+  height: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -536,14 +545,17 @@ a:focus {
 }
 
 .service_section .box:hover {
-  background-color: #ff8a1d;
+  background-color: #e67815;
   color: #ffffff;
 }
 
+
 .service_section .box:hover .img-box img {
-  -webkit-filter: brightness(0) invert(1);
-          filter: brightness(0) invert(1);
+  transform: scale(1.05);
+  transition: transform 0.3s;
+  filter: none; /* Show image normally */
 }
+
 
 .service_section .btn-box {
   display: -webkit-box;
@@ -651,6 +663,7 @@ a:focus {
 
 .heading_container {
   margin-bottom: 30px;
+  align-items: center;
 }
 
 .contact_section input {
@@ -697,6 +710,7 @@ a:focus {
   border-radius: 0;
   color: #ffffff;
   margin-top: 15px;
+  
 }
 
 .contact_section button:hover {
@@ -837,4 +851,4 @@ a:focus {
 }
 
 /* end footer section*/
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
