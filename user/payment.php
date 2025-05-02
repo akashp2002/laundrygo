@@ -59,6 +59,7 @@ $update->execute();
     </style>
 </head>
 <body>
+<a href="order_status.php" style="display: inline-block; margin: 10px 0; padding: 10px 15px; background: #2a2a72; color: white; text-decoration: none; border-radius: 5px;">View Order Status & History</a>
 
 <div class="box">
     <h2>Order Confirmed</h2>
